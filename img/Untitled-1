@@ -1,0 +1,73 @@
+/* Brand colors and fonts */
+body {
+  font-family: Arial, sans-serif; /* Simple, readable font */
+  margin: 0;
+  background: #f4f4f4; /* Light background */
+  color: #222;
+}
+
+/* Hero Section */
+.hero {
+  background: url('img/cw_logo.png') center/cover no-repeat; /* Placeholder background */
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.5); /* Adds contrast over image */
+  display: inline-block;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Story Section */
+.story {
+  display: flex;
+  align-items: center;
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.story img {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.story-text h2 {
+  color: #0077cc; /* Brand blue */
+}
+
+/* Call to Action Section */
+.cta {
+  text-align: center;
+  padding: 40px 20px;
+  background: #0077cc;
+  color: #fff;
+}
+
+.cta button {
+  background: #ffcc00; /* Brand accent color */
+  color: #222;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Design: Makes layout look good on mobile */
+@media (max-width: 600px) {
+  /* Stack story section vertically on small screens */
+  .story {
+    flex-direction: column;
+    text-align: center;
+  }
+  .story img {
+    margin: 0 0 20px 0;
+  }
+  /* Reduce hero padding */
+  .hero {
+    padding: 30px 10px;
+  }
+}

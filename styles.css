@@ -26,19 +26,26 @@ Fonts:
 /* Set up the main font and background color for the whole page */
 body {
   background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  font-family: 'Avenir Next', 'Avenir', 'Segoe UI', Arial, sans-serif; /* Body text uses Avenir */
   margin: 0;
   padding: 0;
-  color: #222;
+  color: #003366; /* Change body text color to blue */
+  font-size: 1.15em; /* Slightly larger body text for readability */
 }
 
 /* Add a slight shadow and rounded corners to each section for depth */
 section {
-  background: #fff; /* White background for sections */
+  background: #e0f7fa; /* Light aqua background for body text sections */
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+  margin: 10px 5px; /* Less space between sections */
+  padding: 12px 8px; /* Less padding inside sections */
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+}
+section:hover {
+  box-shadow: 0 6px 24px rgba(46, 157, 247, 0.18);
+  transform: translateY(-4px) scale(1.02);
+  background: #b2ebf2; /* Slightly deeper aqua on hover */
 }
 
 /* Hero Section Styles */
@@ -49,9 +56,9 @@ section {
   background-size: cover;      /* Make the image cover the whole area */
   background-position: center; /* Center the image */
   background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
+   color: #ffc907;              /* Yellow for headline */
   text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
+  padding: 40px 10px;           /* Less space above and below */
   border-radius: 0 0 16px 16px; /* Only round bottom corners */
 
   /* Add a dark overlay for better text readability */
@@ -69,19 +76,92 @@ section {
   text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
 }
 
+  /* Style the donate button in the hero section */
+  .donate-btn {
+    background: #ffc907;
+    color: #003366;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  .donate-btn:hover {
+    background: #8BD1CB;
+
 /* Style the subheadline */
 .hero p {
   font-size: 1.2em;
   margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+   color: #003366; /* Change paragraph text color to blue */
+   background: #ffc907; /* Optional: keep the background for visibility */
+   padding: 10px;
+   border-radius: 5px;
+   display: inline-block;
+}
+
+/* Layout for logo and images in hero section */
+.hero-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.hero-logo {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+}
+.hero-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
 }
 
 /* Story Section Styles */
 .story {
   background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
+   color: #003366; /* Change story text color to blue */
   text-align: center;
-  padding: 30px 20px;
+  padding: 12px 8px;
+}
+
+/* Style story images side-by-side */
+.story-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.story-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+}
+
+/* Style single story image above text */
+.story-img-single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.story-img-single .story-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
 }
 
 /* Add accent color to section headings */
@@ -94,9 +174,9 @@ h2 {
 /* Call-to-Action Section Styles */
 .call-to-action {
   background-color: #FFC907; /* Primary Yellow */
-  color: #222;
+   color: #003366; /* Change call-to-action text color to blue */
   text-align: center;
-  padding: 30px 20px;
+  padding: 12px 8px;
 }
 
 /* Style the impact story image */
@@ -136,6 +216,47 @@ section {
   margin-bottom: 20px;
 }
 
+/* Reviews Section Styles */
+.reviews {
+  background: #cbccd1;
+  color: #003366;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
+  margin: 10px 5px;
+  padding: 18px 10px;
+}
+/* Compressed and interactive review cards */
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+.review {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+  padding: 10px 8px;
+  max-width: 200px;
+  flex: 1 1 120px;
+  font-size: 0.98em;
+  transition: transform 0.2s cubic-bezier(.68,-0.55,.27,1.55), box-shadow 0.2s;
+  cursor: pointer;
+}
+.review:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 24px rgba(46, 157, 247, 0.22);
+  background: #ffc90733;
+}
+.review span {
+  display: block;
+  margin-top: 6px;
+  font-weight: bold;
+  color: #2E9DF7;
+}
+
 /* 
   Media Queries for Responsive Design
   Media queries help make your website look good on different screen sizes,
@@ -146,36 +267,64 @@ section {
 @media (max-width: 600px) {
   /* Make hero section padding smaller on small screens */
   .hero {
-    padding: 32px 8px;
+    padding: 24px 4px;
     font-size: 1em;
   }
 
   /* Make headline font size smaller so it fits on small screens */
   .hero h1 {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
 
   /* Make subheadline font size smaller */
   .hero p {
     font-size: 1em;
+    padding: 6px;
   }
 
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
+  /* Make donate button smaller */
+  .donate-btn {
+    padding: 10px 18px;
+    font-size: 1em;
   }
 
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
+  /* Stack logo and images in hero section */
+  .hero-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .hero-logo {
+    width: 36px;
+    min-width: 28px;
+    max-width: 50px;
+    height: auto;
   }
 
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
+  /* Style adjustments for story section */
+  .story {
+    padding: 8px 2px;
+  }
+  .story-img-single .story-img {
+    width: 100px;
+    height: 100px;
+  }
+  .story-text p {
+    font-size: 1em;
+  }
+
+  /* Adjust reviews section for mobile */
+  .reviews {
+    padding: 10px 2px;
+  }
+  .review-list {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .review {
+    max-width: 98vw;
+    font-size: 0.95em;
+    padding: 8px 4px;
   }
 }
 
